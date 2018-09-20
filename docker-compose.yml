@@ -1,0 +1,12 @@
+#docker-compose version
+version: "3"
+
+#containers to start
+services:
+  redis-server:
+    image: "redis"
+  node-app:
+    build: .redis-server
+    #"syste_port : container_port"
+    ports:
+      - "4001:8001"
